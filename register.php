@@ -55,7 +55,7 @@ if (isset($_POST['registerButton'])) {
                 <label for="loginUsername">Username</label>
                 <input id="loginUsername"
                     name="loginUsername"type="text"
-                    placeholder="Username" _required
+                    placeholder="Username" required
                 >
             </p>
 
@@ -63,7 +63,7 @@ if (isset($_POST['registerButton'])) {
                 <label for="loginPassword">Password</label>
                 <input id="loginPassword"
                     name="loginPassword"type="password"
-                    _required
+                    required
                 >
             </p>
 
@@ -78,28 +78,28 @@ if (isset($_POST['registerButton'])) {
                 <label for="registerUsername">Username</label>
                 <input id="registerUsername"
                     name="registerUsername"type="text"
-                    placeholder="Username" _required
+                    placeholder="Username" required
                 >
             </p>
             <p>
                 <label for="register">First Name</label>
                 <input id="registerFirstName"
                     name="registerFirstName"type="text"
-                    placeholder="First Name" _required
+                    placeholder="First Name" required
                 >
             </p>
             <p>
                 <label for="registerLastName">Last Name</label>
                 <input id="registerlastName"
                     name="registerlastName"type="text"
-                    placeholder="Last Name" _required
+                    placeholder="Last Name" required
                 >
             </p>
             <p>
                 <label for="registerEmail">Email</label>
                 <input id="registerEmail"
                     name="registerEmail"type="email"
-                    placeholder="Email" _required
+                    placeholder="Email" required
                 >
             </p>
 
@@ -108,7 +108,7 @@ if (isset($_POST['registerButton'])) {
                 <input id="registerPassword"
                     name="registerPassword"type="password"
                     placeholder="Password"
-                    _required
+                    required
                 >
             </p>
             <p>
@@ -116,7 +116,7 @@ if (isset($_POST['registerButton'])) {
                 <input id="registerPassword2"
                     name="registerPassword2"type="password"
                     placeholder="Password"
-                    _required
+                    required
                 >
             </p>
 
