@@ -18,6 +18,8 @@ function sanatizePassword($text) {
     return $result;
 }
 
+
+
 if (isset($_POST['registerButton'])) {
     $username = sanatizeUsername($_POST['registerUsername']);
     $firstName = sanatizeString($_POST['registerFirstName']);
@@ -25,4 +27,15 @@ if (isset($_POST['registerButton'])) {
     $email = sanatizeString($_POST['registerEmail']);
     $password = sanatizePassword($_POST['registerPassword']);
     $password2 = sanatizePassword($_POST['registerPassword2']);
+
+    $wasSuccessful = $account->register($username, $firstName, $lastName, $email, $password, $password2);
+
+    if ($wasSuccessful) {
+        header("Location: index.php");
+    }
+
 }
+
+
+
+?>
