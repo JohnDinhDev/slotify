@@ -6,6 +6,7 @@ $account = new Account($con);
 require('./includes/handlers/register-handler.php');
 require('./includes/handlers/login-handler.php');
 
+
 function getInputValue($name)
 {
     if (isset($_POST[$name])) {

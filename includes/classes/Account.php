@@ -52,7 +52,10 @@
                 return;
             }
 
-            $checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE users='$username';");
+            $checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username='$username';");
+
+
+
             if (mysqli_num_rows($checkUsernameQuery) !== 0) {
                 array_push($this->errorArray, Constants::$userNameTaken);
                 return;
@@ -79,7 +82,9 @@
                 return;
             }
 
-            $checkEmailQuery = mysqli_query($this->con, "SELECT email FROM users WHERE users='$email';");
+            $checkEmailQuery = mysqli_query($this->con, "SELECT email FROM users WHERE email='$email';");
+
+
             if (mysqli_num_rows($checkEmailQuery) !== 0) {
                 array_push($this->errorArray, Constants::$emailTaken);
                 return;
