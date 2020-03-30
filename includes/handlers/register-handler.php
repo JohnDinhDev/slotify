@@ -20,6 +20,8 @@ function sanatizePassword($text) {
 
 
 
+echo $query;
+
 if (isset($_POST['registerButton'])) {
     $username = sanatizeUsername($_POST['registerUsername']);
     $firstName = sanatizeString($_POST['registerFirstName']);
@@ -30,8 +32,13 @@ if (isset($_POST['registerButton'])) {
 
     $wasSuccessful = $account->register($username, $firstName, $lastName, $email, $password, $password2);
 
+
+
+
     if ($wasSuccessful) {
         header("Location: index.php");
+    } else {
+        echo "Nah";
     }
 
 }
