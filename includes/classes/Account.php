@@ -10,6 +10,23 @@
             $this->errorArray = array();
         }
 
+        public function login($username, $password) {
+            // Fetch hashed password from DB
+            $query = "SELECT password FROM users WHERE username='$username';";
+
+            $hashedPassword = mysqli_query($this->con, $query);
+            $hashedPassword = mysqli_fetch_row($hashedPassword)[0];
+
+            // Verify password
+            if (password_verify($password, $hashedPassword)) {
+                return true;
+            } else {
+                array_push($this->errorArray, Constants::$loginFail);
+                return false;
+            }
+
+        }
+
         public function register($username, $firstName, $lastName, $email, $password, $password2) {
             $this->validateUsername($username);
             $this->validateFirstName($firstName);

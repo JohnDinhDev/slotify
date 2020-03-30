@@ -14,7 +14,6 @@ function getInputValue($name)
     } 
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +32,7 @@ function getInputValue($name)
             <h2>Login to your account</h2>
 
             <p>
+                <?php echo $account->getError(Constants::$loginFail); ?>
                 <label for="loginUsername">Username</label>
                 <input id="loginUsername" name="loginUsername" type="text" placeholder="Username" required>
             </p>
